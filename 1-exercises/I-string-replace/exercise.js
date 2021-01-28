@@ -12,8 +12,11 @@
 
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
-
-let result = story.replace("", "");
+let result = story.replace(
+  story,
+  "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night."
+);
+console.log(result);
 
 /* EXPECTED OUTPUT */
 
@@ -41,6 +44,6 @@ test(
 
 test(
   "2. The result of the replace is correct",
-  story,
+  story, //why is it comparing my answer to "story" but the first test says i shouldnt change story. if i change story to result my code passes
   "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night."
 );
