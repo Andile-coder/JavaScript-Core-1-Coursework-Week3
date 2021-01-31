@@ -11,7 +11,10 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels(arr) {
+  let newArr = arr.sort();
+  return newArr.substring("19.5%", "23.5");
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
