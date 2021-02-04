@@ -15,7 +15,12 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  return arr.filter((item) => {
+    let result = item.includes("family") && item[0] == "A";
+    return result;
+  });
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

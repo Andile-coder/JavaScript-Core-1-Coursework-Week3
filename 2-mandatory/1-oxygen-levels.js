@@ -12,8 +12,9 @@
 */
 
 function safeLevels(arr) {
-  let newArr = arr.sort();
-  return newArr.substring("19.5%", "23.5");
+  let newArr = arr.map((item) => Number(item.replace("%", "")));
+  let result = newArr.find((item) => item > 19.5 && item < 23.5);
+  return `${result}%`;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
