@@ -24,26 +24,26 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
   let newArray = [];
-  for (arr of passwords) {
-    if (arr == passwords.every((item) => item)) {
-      newArray.push(false);
-    }
-  }
+  let valueArray = [];
 
   passwords.map((password) => {
-    if (
-      password.match(/[0-9]/) &&
-      password.match(/[a-z]/) &&
-      password.match(/[A-Z]/) &&
-      password.match(/[$!%*.&#]/) &&
-      password.length >= 5
-    ) {
-      newArray.push(true);
-    } else {
+    if (valueArray.find((item) => password === item)) {
       newArray.push(false);
+    } else {
+      valueArray.push(password);
+      if (
+        password.match(/[0-9]/) &&
+        password.match(/[a-z]/) &&
+        password.match(/[A-Z]/) &&
+        password.match(/[$!%*.&#]/) &&
+        password.length >= 5
+      ) {
+        newArray.push(true);
+      } else {
+        newArray.push(false);
+      }
     }
   });
-  console.log(passwords.map((item) => item != passwords.every((item) => item)));
   return newArray;
 }
 
