@@ -23,7 +23,7 @@ function sortAges(arr) {
   }
   for (let i = 0; i < newArr.length - 1; i++) {
     let minIndex = i;
-    for (let j = 1; j < newArr.length; j++) {
+    for (let j = 1; j <= newArr.length; j++) {
       if (newArr[j] < newArr[minIndex]) {
         minIndex = j;
       }
